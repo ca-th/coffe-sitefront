@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f4d6b0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: #822;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.mensagem {
+  color: #4a2c2a;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+}
+
+.botoes {
+  margin-bottom: 3rem;
+}
+
+button {
+  background-color: #a44;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #822;
+}
+
+.descricao {
+  background-color: white;
+  color: #333;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  display: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #f4d6b0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #a55858;
+}
+
+
+#coffee-beans {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bean {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: #6b3e26;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.5;
+  animation: floatBean 12s linear infinite;
+}
+
+@keyframes floatBean {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#form-reserva {
+  background-color: white;
+  color: #4a2c2a;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  text-align: left;
+}
+
+#form-reserva label {
+  font-weight: bold;
+}
+
+#form-reserva input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form-reserva button {
+  background-color: #a44;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#form-reserva button:hover {
+  background-color: #822;
+}
